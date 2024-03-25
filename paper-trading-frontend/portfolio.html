@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptocurrency Portfolio</title>
+    <link rel="stylesheet" href="portfolioStyles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cryptocurrency Portfolio</h1>
+      <div id="portfolio-list"></div>
+      <div id="buying-power"></div>
+      <div id="buy-form">
+        <h2>Buy Cryptocurrency</h2>
+        <form id="buy-form">
+          <label for="b-symbol">Symbol:</label>
+          <input type="text" id="b-symbol" name="b-symbol" list="symbol-list" required />
+          <datalist id="symbol-list">
+          </datalist>            
+          <label for="b-quantity">Quantity:</label>
+          <input type="text" id="b-quantity" name="b-quantity" required />
+          <button type="submit">Buy</button>
+        </form>
+      </div>
+      <div id="sell-form">
+        <h2>Sell Cryptocurrency</h2>
+        <form id="sell-form">
+          <label for="s-symbol">Symbol:</label>
+          <input type="text" id="s-symbol" name="s-symbol" list="symbol-list" required />
+          <datalist id="symbol-list">
+          </datalist>   
+          <label for="s-quantity">Quantity:</label>
+          <input type="text" id="s-quantity" name="s-quantity" required />
+          <button type="submit">Sell</button>
+        </form>
+      </div>
+      <button id="logout">Logout</button>
+    </div>
+
+    
+    <script src="app.js"></script>
+  </body>
+</html>

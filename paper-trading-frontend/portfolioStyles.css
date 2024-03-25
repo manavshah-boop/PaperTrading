@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#portfolio-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.portfolio-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  margin: 5px 0;
+}
+
+.portfolio-item strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.portfolio-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.portfolio-item p {
+  margin: 5px 0;
+}
+
+.portfolio-item strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.portfolio-details {
+  display: none;
+  margin-top: 10px;
+}
+
+#buying-power {
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+#buy-form,
+#sell-form {
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
