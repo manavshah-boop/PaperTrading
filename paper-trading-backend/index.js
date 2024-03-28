@@ -312,12 +312,12 @@ app.get("/buying_power", authenticateToken, async (req, res) => {
 
 app.get("/symbols", async (req, res) => {
   try {
-    const symbolurl = env.API_SYMBOL_URL + 'symbols';
+    const symbolurl = env.API_SYMBOL_URL;
 
     const config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: url,
+      url: symbolurl,
       headers: {
         Accept: "text/json",
         "X-CoinAPI-Key": apiKey,
