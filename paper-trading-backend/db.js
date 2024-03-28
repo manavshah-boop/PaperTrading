@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Manavshah#2002",
-  database: "crypto_wallet",
+  host: "papertrading.mysql.database.azure.com",
+  user: "manavs",
+  password: "Vinny#2002",
+  database: "data",
 });
 
 connection.connect((err) => {
