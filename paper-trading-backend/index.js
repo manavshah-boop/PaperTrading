@@ -6,7 +6,7 @@ const axios = require("axios");
 const connection = require("./db");
 const Portfolio = require("./models/Portfolio");
 const cors = require("cors");
-const cron = require("./scheduledTasks");
+//const cron = require("./scheduledTasks");
 
 
 const app = express();
@@ -348,4 +348,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-cron.schedule();
+//cron.schedule();
