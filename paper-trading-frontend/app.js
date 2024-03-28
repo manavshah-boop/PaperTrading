@@ -194,6 +194,8 @@ function toggleDetails(index) {
   }
 }
 
+
+
 document.getElementById("logout").addEventListener("click", () => {
   localStorage.removeItem("token");
   window.location.href = "./index.html";
@@ -210,3 +212,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.location.href = "./index.html";
   }
 });
+
+function pingBackend() {
+  fetch('https://papertrading-l028.onrender.com/ping', {
+    method: 'GET',
+  })
+  .then(() => {
+    console.log('Ping sent to backend.');
+  })
+  .catch((error) => {
+    console.error('Error sending ping:', error);
+  });
+}
+
+// Call pingBackend every 3 minutes (3 * 60 * 1000 milliseconds)
+setInterval(pingBackend, 3 * 60 * 1000);
