@@ -6,10 +6,10 @@ const axios = require("axios");
 const connection = require("./db");
 const Portfolio = require("./models/Portfolio");
 const cors = require("cors");
-app.use(cors());
 
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 const path = require("path");
 
