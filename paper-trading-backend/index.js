@@ -11,10 +11,14 @@ const app = express();
 const PORT = 3000;
 const path = require("path");
 
+require('dotenv').config();
+
 app.use(bodyParser.json());
 app.use(cors()); // Use CORS middleware
 const User = require("./models/User");
-const apiKey = "4653D61B-DC61-42C3-8997-E46820FBEE46";
+const { env } = require("process");
+const e = require("express");
+const apiKey = process.env.API_KEY;
 // Middleware
 app.use(bodyParser.json());
 // Middleware to verify JWT token
@@ -36,7 +40,7 @@ const authenticateToken = (req, res, next) => {
 
 const getLatestCryptoPrice = async (symbol) => {
   try {
-    const url = `https://rest.coinapi.io/v1/exchangerate/${symbol}/USD`;
+    const url = process.env.API_URL + symbol + "/USD";
 
     const config = {
       method: "get",
@@ -306,7 +310,7 @@ app.get("/buying_power", authenticateToken, async (req, res) => {
 
 app.get("/symbols", async (req, res) => {
   try {
-    const url = 'https://rest.coinapi.io/v1/assets';
+    const symbolurl = env.API_URL + 'symbols';
 
     const config = {
       method: "get",
