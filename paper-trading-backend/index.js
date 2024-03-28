@@ -344,12 +344,6 @@ app.get('/ping', (req, res) => {
   res.status(200).send('Pong'); // Send back a response if needed
 });
 
-app.listen(port, () => {
-  console.log(`Backend server listening at http://localhost:${port}`);
-});
-
-
-
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
