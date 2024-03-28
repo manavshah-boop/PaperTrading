@@ -339,7 +339,14 @@ app.get("/symbols", async (req, res) => {
   }
 });
 
+app.get('/ping', (req, res) => {
+  console.log('Received ping from frontend.');
+  res.status(200).send('Pong'); // Send back a response if needed
+});
 
+app.listen(port, () => {
+  console.log(`Backend server listening at http://localhost:${port}`);
+});
 
 
 
