@@ -348,4 +348,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-cron.start();
+cron.schedule();
