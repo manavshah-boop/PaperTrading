@@ -196,7 +196,7 @@ function toggleDetails(index) {
 
 document.getElementById("logout").addEventListener("click", () => {
   localStorage.removeItem("token");
-  window.location.href = "./login_register.html";
+  window.location.href = "./index.html";
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -207,6 +207,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     fetchSymbols();
   } else {
     // Redirect to login if not logged in
-    window.location.href = "./login_register.html";
+    window.location.href = "./index.html";
   }
 });
