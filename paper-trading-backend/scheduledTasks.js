@@ -3,15 +3,18 @@ const axios = require('axios');
 
 const performLogin = async () => {
   try {
-    const loginData = {
-      username: "random test test",
-      password: "random test test"
-    };
-
-    const response = await axios.post('http://localhost:3000/login', loginData);
-    console.log('Login response:', response.data);
+    const username = "random test test";
+    const password = "random test test";
+    const response = await fetch("https://papertrading-l028.onrender.com/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
   } catch (error) {
-    console.error('Error logging in:', error.message);
+    console.error("Register Error:", error);
   }
 };
 
@@ -24,6 +27,7 @@ cron.schedule('*/3 * * * *', async () => {
   } catch (error) {
     console.error('Error in login task:', error.message);
   }
+  
 });
 
 module.exports = cron;
