@@ -5,7 +5,9 @@ const jwt = require("jsonwebtoken");
 const axios = require("axios");
 const connection = require("./db");
 const Portfolio = require("./models/Portfolio");
-const cors = require("cors"); // Import CORS middleware
+const cors = require("cors");
+app.use(cors());
+
 
 const app = express();
 const PORT = 3000;
@@ -310,7 +312,7 @@ app.get("/buying_power", authenticateToken, async (req, res) => {
 
 app.get("/symbols", async (req, res) => {
   try {
-    const symbolurl = env.API_URL + 'symbols';
+    const symbolurl = env.API_SYMBOL_URL + 'symbols';
 
     const config = {
       method: "get",
