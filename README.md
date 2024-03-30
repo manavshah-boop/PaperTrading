@@ -17,7 +17,7 @@
     <li><a href="#technology-stack">Technology Stack</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#future-enhancements">Future Enhancements</a></li>
-    <li><a href="#authors">Authors</a></li>
+    <li><a href="#author">Authors</a></li>
     <li><a href="#license">License</a></li>
   </ul>
 
