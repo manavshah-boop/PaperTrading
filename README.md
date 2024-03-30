@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PaperTrading README</title>
-</head>
-
-<body>
   <h1 align="center">Welcome to PaperTrading 👋</h1>
   <p>
     <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
@@ -59,7 +50,5 @@
   <p>Start your crypto trading journey today with our full-stack crypto trading web app!</p>
 
   <hr>
-  <p>Show your support by giving a ⭐️ if this project helped you!</p>a>_</p>
+  <p>Show your support by giving a ⭐️ if this project helped you!</p></p>
 </body>
-
-</html>
