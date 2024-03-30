@@ -21,13 +21,20 @@
   </ul>
 
   <h2>Install</h2>
-  <pre><code>cd paper-trading-backend
-npm install
-</code></pre>
+  <p>To install the project, follow these steps:</p>
+  <ol>
+    <li>Clone the repository:</li>
+    <pre><code>git clone https://github.com/manavshah-boop/papertrading.git</code></pre>
+    <li>Navigate to the project backend directory:</li>
+    <pre><code>cd papertrading</code></pre>
+    <li>Install dependencies:</li>
+    <pre><code>npm install</code></pre>
+  </ol>
 
   <h2>Usage</h2>
-  <pre><code>node index.js
-</code></pre>
+  <p>To run the project locally, use the following command:</p>
+  <pre><code>node index.js</code></pre>
+  <p>You should now be able to interact with the web app by accessing "index.html" in your default browser</p>
 
   <h2>Demo</h2>
   <p>Check out the live demo <a href="https://papertrading.vercel.app">here</a>.</p>
