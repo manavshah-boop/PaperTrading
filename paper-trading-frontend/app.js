@@ -214,16 +214,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function pingBackend() {
-  fetch('https://papertrading-l028.onrender.com/ping', {
-    method: 'GET',
-  })
-  .then(() => {
-    console.log('Ping sent to backend.');
-  })
-  .catch((error) => {
-    console.error('Error sending ping:', error);
-  });
+  axios.get('/ping')
+    .then(() => {
+      console.log('Ping sent to backend');
+    })
+    .catch((error) => {
+      console.error('Error pinging backend:', error);
+    });
 }
 
-// Call pingBackend every 3 minutes (3 * 60 * 1000 milliseconds)
-setInterval(pingBackend, 3 * 60 * 1000);
+// Call pingBackend every 3 minutes
+setInterval(pingBackend, 1 * 60 * 1000);
+
