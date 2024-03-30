@@ -61,7 +61,7 @@
 
   <hr>
 
-### ✨ [Demo](papertrading.vercel.app)
+### ✨ [Demo](https://papertrading.vercel.app)
 ### ✨ [API Access](https://papertrading-l028.onrender.com)
 
 ## Install
