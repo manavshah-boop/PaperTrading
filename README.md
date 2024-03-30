@@ -26,7 +26,7 @@
     <li>Clone the repository:</li>
     <pre><code>git clone https://github.com/manavshah-boop/papertrading.git</code></pre>
     <li>Navigate to the project backend directory:</li>
-    <pre><code>cd papertrading</code></pre>
+    <pre><code>cd papertrading/paper-trading-backend</code></pre>
     <li>Install dependencies:</li>
     <pre><code>npm install</code></pre>
   </ol>
