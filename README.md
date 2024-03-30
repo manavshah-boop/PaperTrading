@@ -6,6 +6,33 @@
 
   <p>This full-stack crypto trading web application provides users with a simulated environment to trade cryptocurrencies without using real money. Users can register, log in securely, manage their portfolio, buy/sell cryptocurrencies, and track their buying power in real-time.</p>
 
+
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#technology-stack">Technology Stack</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#future-enhancements">Future Enhancements</a></li>
+    <li><a href="#authors">Authors</a></li>
+  </ul>
+
+  <h2>Install</h2>
+  <pre><code>cd paper-trading-backend
+npm install
+</code></pre>
+
+  <h2>Usage</h2>
+  <pre><code>node index.js
+</code></pre>
+
+  <h2>Demo</h2>
+  <p>Check out the live demo <a href="https://papertrading.vercel.app">here</a>.</p>
+  <p>Access the API <a href="https://papertrading-l028.onrender.com">here</a>.</p>
+
   <h2>Features</h2>
   <ul>
     <li><strong>User Authentication:</strong> Secure user authentication using bcrypt hashing and JSON Web Tokens (JWT) ensures user data privacy. Users can register with a unique username, password, and initial investment.</li>
@@ -24,32 +51,13 @@
     <li><strong>External APIs:</strong> The application integrates with external cryptocurrency APIs to fetch real-time market data, including current cryptocurrency prices and symbol information.</li>
   </ul>
 
-  <h2>How to Use</h2>
-  <ol>
-    <li><strong>Registration:</strong> Users can sign up for an account by providing a unique username, a secure password, and an initial investment amount.</li>
-    <li><strong>Login:</strong> Registered users can securely log in using their credentials to access the trading platform.</li>
-    <li><strong>Portfolio Management:</strong> Upon logging in, users are presented with a detailed portfolio dashboard, showcasing their cryptocurrency holdings and current portfolio value.</li>
-    <li><strong>Trading:</strong> Users can buy and sell cryptocurrencies within the platform, with transactions processed based on real-time market prices.</li>
-    <li><strong>Symbol Search:</strong> A dynamic symbol search feature enables users to quickly find and select cryptocurrencies of interest.</li>
-    <li><strong>Live Updates:</strong> The application provides live updates on buying power, portfolio values, and transaction statuses, ensuring users have up-to-date information for decision-making.</li>
-  </ol>
-
-  <h2>Future Enhancements</h2>
-  <ul>
-    <li><strong>Historical Data Analysis:</strong> Implementing tools for users to analyze historical price trends, enabling informed trading strategies.</li>
-    <li><strong>Advanced Trading Options:</strong> Introducing features such as limit orders, stop-loss orders, and portfolio rebalancing for more advanced trading scenarios.</li>
-    <li><strong>Social Trading:</strong> Integrating social features to allow users to follow and replicate trades of successful traders within the community.</li>
-  </ul>
-
   <h2>Deployment</h2>
-<p>The web application has been successfully deployed to the following platforms:</p>
-
+  <p>The web application has been successfully deployed to the following platforms:</p>
   <ul>
     <li><strong>Vercel:</strong> The frontend of the application is deployed on Vercel, providing a live demo and hosting for the client-side of the app. Users can access the app using the "Demo" link below.</li>
     <li><strong>Render:</strong> The backend server is deployed on Render, serving API endpoints for user authentication, portfolio management, and transaction processing. The API can be accessed using the link below.</li>
     <li><strong>Azure MySQL Database:</strong> The application's data is stored in an Azure MySQL database, ensuring reliable and scalable data management. The database is hosted on Azure's cloud infrastructure.</li>
   </ul>
-
   <p>Remember to configure environment variables, API keys, and database connections in your deployment environment.</p>
 
   <p>To access the live demo or the API, use the links below.</p>
@@ -57,33 +65,23 @@
   <h2>About</h2>
   <p>This full-stack crypto trading web app is designed to provide an immersive and educational experience for cryptocurrency enthusiasts, traders, and beginners alike. By offering a risk-free environment to practice trading strategies and explore the world of cryptocurrencies, the platform aims to empower users with valuable insights and hands-on experience.</p>
 
+<h2>Future Enhancements</h2>
+  <ul>
+    <li><strong>Historical Data Analysis:</strong> Implementing tools for users to analyze historical price trends, enabling informed trading strategies.</li>
+    <li><strong>Advanced Trading Options:</strong> Introducing features such as limit orders, stop-loss orders, and portfolio rebalancing for more advanced trading scenarios.</li>
+    <li><strong>Social Trading:</strong> Integrating social features to allow users to follow and replicate trades of successful traders within the community.</li>
+  </ul>
+
   <p>Start your crypto trading journey today with PaperTrading!</p>
 
   <hr>
 
-### ✨ [Demo](https://papertrading.vercel.app)
-### ✨ [API Access](https://papertrading-l028.onrender.com)
-
-## Install
-
-```sh
-cd paper-trading-backend
-npm install
-```
-
-## Usage
-
-```sh
-node index.js
-```
-
-## Author
-
-👤 **Manav Shah**
-
-* Github: [@manavshah-boop](https://github.com/manavshah-boop)
-* LinkedIn: [@manav-shah1](https://linkedin.com/in/manav-shah1)
+  <h2>Author</h2>
+  <p>👤 <a href="https://github.com/manavshah-boop">Manav Shah</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/manav-shah1">Manav Shah</a></p>
 
   <hr>
-  <p>Show your support by giving a ⭐️ if this project helped you!</p></p>
+
+  <p>Show your support by giving a ⭐️ if this project helped you!</p>
+
 </body>
