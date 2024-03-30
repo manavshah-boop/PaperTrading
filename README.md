@@ -42,12 +42,23 @@
   </ul>
 
   <h2>Deployment</h2>
-  <p>The web application can be deployed to a cloud platform such as Heroku, AWS, or DigitalOcean for accessibility to users worldwide. Ensure to configure environment variables, API keys, and database connections for seamless operation.</p>
+<p>The web application has been successfully deployed to the following platforms:</p>
+
+  <ul>
+    <li><strong>Vercel:</strong> The frontend of the application is deployed on Vercel, providing a live demo and hosting for the client-side of the app. Users can access the app using the "Demo" link above.</li>
+    <li><strong>Render:</strong> The backend server is deployed on Render, serving API endpoints for user authentication, portfolio management, and transaction processing. The API can be accessed <a href="https://papertrading-l028.onrender.com">here</a>.</li>
+    <li><strong>Azure MySQL Database:</strong> The application's data is stored in an Azure MySQL database, ensuring reliable and scalable data management. The database is hosted on Azure's cloud infrastructure.</li>
+  </ul>
+
+  <p>To access the live demo, use the link above. You can also interact with the API endpoints <a href="https://papertrading-l028.onrender.com">directly</a>.</p>
+
+  <p>Ensure to configure environment variables, API keys, and database connections for seamless operation in your deployment environment.</p>
+
 
   <h2>About</h2>
   <p>This full-stack crypto trading web app is designed to provide an immersive and educational experience for cryptocurrency enthusiasts, traders, and beginners alike. By offering a risk-free environment to practice trading strategies and explore the world of cryptocurrencies, the platform aims to empower users with valuable insights and hands-on experience.</p>
 
-  <p>Start your crypto trading journey today with our full-stack crypto trading web app!</p>
+  <p>Start your crypto trading journey today with PaperTrading!</p>
 
   <hr>
   <p>Show your support by giving a ⭐️ if this project helped you!</p></p>
