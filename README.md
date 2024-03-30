@@ -92,7 +92,7 @@
   <h2>License</h2>
 <p>Copyright © 2024 Manav Shah.<br>
 This project is licensed under the MIT License - see the <a href="LICENSE">License</a> file for details.</p>
-
+ <hr>
   <p>Show your support by giving a ⭐️ if this project helped you!</p>
 
 </body>
