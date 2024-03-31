@@ -68,7 +68,7 @@
   </ul>
   <p>Remember to configure environment variables, API keys, and database connections in your deployment environment.</p>
 
-  <p>To access the live demo or the API, use the links below.</p>
+  <p>To access the live demo or the API, use the links above.</p>
 
   <h2>About</h2>
   <p>This full-stack crypto trading web app is designed to provide an immersive and educational experience for cryptocurrency enthusiasts, traders, and beginners alike. By offering a risk-free environment to practice trading strategies and explore the world of cryptocurrencies, the platform aims to empower users with valuable insights and hands-on experience.</p>
