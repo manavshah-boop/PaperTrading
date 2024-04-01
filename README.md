@@ -9,9 +9,9 @@
 
   <h2>Table of Contents</h2>
   <ul>
+    <li><a href="#demo">Demo</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#demo">Demo</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#deployment">Deployment</a></li>
     <li><a href="#technology-stack">Technology Stack</a></li>
@@ -21,8 +21,12 @@
     <li><a href="#license">License</a></li>
   </ul>
 
+  <h2>Demo</h2>
+  <p>Check out the live demo <a href="https://papertrading.vercel.app">here</a>.</p>
+  <p>Access the API <a href="https://papertrading-l028.onrender.com">here</a>.</p>
+
   <h2>Install</h2>
-  <p>To install the project, follow these steps:</p>
+  <p>To install the project for PERSONAL USE, follow these steps:</p>
   <ol>
     <li>Clone the repository:</li>
     <pre><code>git clone https://github.com/manavshah-boop/papertrading.git</code></pre>
@@ -36,10 +40,6 @@
   <p>To run the project locally, use the following command:</p>
   <pre><code>node index.js</code></pre>
   <p>You should now be able to interact with the web app by accessing "index.html" in your default browser</p>
-
-  <h2>Demo</h2>
-  <p>Check out the live demo <a href="https://papertrading.vercel.app">here</a>.</p>
-  <p>Access the API <a href="https://papertrading-l028.onrender.com">here</a>.</p>
 
   <h2>Features</h2>
   <ul>
