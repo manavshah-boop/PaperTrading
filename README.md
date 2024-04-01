@@ -39,6 +39,7 @@
   <h2>Usage</h2>
   <p>To run the project locally, use the following command:</p>
   <pre><code>node index.js</code></pre>
+  <p>Remember to configure environment variables, API keys, and database connections in your deployment environment.</p>
   <p>You should now be able to interact with the web app by accessing "index.html" in your default browser</p>
 
   <h2>Features</h2>
