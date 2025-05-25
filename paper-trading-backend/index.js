@@ -17,17 +17,10 @@ const Portfolio = require("./models/Portfolio");
 const cors = require("cors");
 //const cron = require("./scheduledTasks");
 
-const cors = require("cors");
-//const cron = require("./scheduledTasks");
-
-
 const app = express();
-app.use(cors());
 app.use(cors());
 const PORT = 3000;
 const path = require("path");
-
-require('dotenv').config();
 
 require('dotenv').config();
 
@@ -35,11 +28,8 @@ app.use(bodyParser.json());
 app.use(cors()); // Use CORS middleware
 const User = require("./models/User");
 const { env } = require("process");
-const e = require("express");
 const apiKey = process.env.API_KEY;
-const { env } = require("process");
 const e = require("express");
-const apiKey = process.env.API_KEY;
 // Middleware
 app.use(bodyParser.json());
 // Middleware to verify JWT token
@@ -67,7 +57,6 @@ const authenticateToken = (req, res, next) => {
 
 const getLatestCryptoPrice = async (symbol) => {
   try {
-    const url = process.env.API_URL + symbol + "/USD";
     const url = process.env.API_URL + symbol + "/USD";
 
     const config = {
@@ -341,7 +330,6 @@ app.get("/buying_power", authenticateToken, async (req, res) => {
 
 app.get("/symbols", async (req, res) => {
   try {
-    const symbolurl = env.API_SYMBOL_URL;
     const symbolurl = env.API_SYMBOL_URL;
 
     const config = {
