@@ -80,4 +80,15 @@ User.deleteByUsername = (username) => {
   });
 };
 
+User.findByUser = (username) => {
+  const sql = "SELECT * FROM users WHERE username = ?";
+  return new Promise((resolve, reject) => { // Use Promise to handle async operation
+    connection.query(sql, [username], (err, results) => {
+      if (err) return reject(err);
+      if (results.length === 0) return resolve(null);
+      resolve(results[0]);
+    });
+  });
+}
+
 module.exports = User;
