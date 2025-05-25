@@ -1,12 +1,21 @@
+/*
+ * File: /models/User.js
+ * Description: User model for the paper trading backend.
+ * This file contains functions to interact with the users table in the database,
+ * including creating users, finding users by username or ID, updating buying power,
+ * and deleting users.
+*/
 const connection = require("../db");
 
 const User = {};
 
 User.create = (username, password, investment, callback) => {
   const sql = "INSERT INTO users (username, password, buying_power) VALUES (?, ?, ?)";
-  connection.query(sql, [username, password, investment], (err, result) => {
-    if (err) return callback(err, null);
-    return callback(null, result);
+  return new Promise((resolve, reject) => { // Use Promise to handle async operation
+    connection.query(sql, [username, password, investment], (err, result) => {
+      if (err) return reject(err);
+      resolve(result);
+    });
   });
 };
 
@@ -52,5 +61,23 @@ User.decreaseBuyingPower = (userId, amount, callback) => {
     return callback(null, result);
   });
 }
+
+User.deleteById = (userId, callback) => {
+  const sql = "DELETE FROM users WHERE id = ?";
+  connection.query(sql, [userId], (err, result) => {
+    if (err) return callback(err, null);
+    return callback(null, result);
+  });
+};
+
+User.deleteByUsername = (username) => { 
+  const sql = "DELETE FROM users WHERE username = ?";
+  return new Promise((resolve, reject) => { // Use Promise to handle async operation
+    connection.query(sql, [username], (err, result) => {
+      if (err) return reject(err);
+      resolve(result);
+    });
+  });
+};
 
 module.exports = User;

@@ -1,4 +1,5 @@
-const baseURL = "https://papertrading-l028.onrender.com";
+const baseURL = "http://localhost:3000";
+// const baseURL = "https://paper-trading-backend.onrender.com";
 const displayPortfolio = async () => {
   try {
     const token = localStorage.getItem("token");

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function login(username, password) {
     try {
-      const response = await fetch("https://papertrading-l028.onrender.com/login", {
+      const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function register(username, password, investment) {
     try {
-      const response = await fetch("https://papertrading-l028.onrender.com/register", {
+      const response = await fetch("http://localhost:3000/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

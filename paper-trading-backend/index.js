@@ -1,3 +1,12 @@
+/*
+ * File: paper-trading-backend/index.js
+ * Description: Main entry point for the paper trading backend application.
+ * This file sets up the Express server, connects to the database,
+ * defines routes for user registration, login, portfolio management,
+ * buying and selling cryptocurrencies, and handles authentication.
+ * Name: Manav Shah
+ * Date: 2025-05-25
+*/
 const express = require("express");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcryptjs");
@@ -27,16 +36,22 @@ app.use(bodyParser.json());
 // Middleware to verify JWT token
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
+  // Expected format: "Bearer <token>"
   const token = authHeader && authHeader.split(" ")[1];
-  if (token == null) {
+
+  if (!token) {
     return res.sendStatus(401);
   }
 
-  jwt.verify(token, "secretKey", (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET_KEY, (err, decoded) => {
     if (err) {
-      return res.sendStatus(403);
+      if (err.name === 'TokenExpiredError') {
+        return res.status(401).json({ error: "Token expired. Please log in again." });
+      }
+      return res.status(403).json({ error: "Invalid token." });
     }
-    req.user = user;
+    
+    req.user = decoded;
     next();
   });
 };
@@ -67,15 +82,19 @@ const getLatestCryptoPrice = async (symbol) => {
 app.post("/register", async (req, res) => {
   try {
     const { username, password, investment } = req.body;
+    
+    if (!username || !password || investment === undefined) { // Check if all required fields are provided
+      return res.status(400).json({ error: "Username, password, and investment are required" });
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
-    User.create(username, hashedPassword, investment, (err, result) => {
-      if (err) {
-        console.error("Error registering user:", err);
-        return res.status(500).json({ error: "Failed to register user" });
-      }
-      res.status(201).json({ message: "User registered successfully" });
-    });
+    await User.create(username, hashedPassword, investment); // update to use async method
+    res.status(201).json({ message: "User registered successfully" });
+
   } catch (error) {
+    if (error.code === 'ER_DUP_ENTRY') { // Check for duplicate username error
+      return res.status(409).json({ error: "Username already exists" });
+    }
     console.error("Error registering user:", error);
     res.status(500).json({ error: "Failed to register user" });
   }
@@ -84,7 +103,6 @@ app.post("/register", async (req, res) => {
 app.post("/login", async (req, res) => {
   try {
     const { username, password } = req.body;
-    console.log("Login Form Data:", { username, password }); // Check form data
     User.findByUsername(username, async (err, user) => {
       if (err) {
         console.error("Error finding user:", err);
@@ -345,8 +363,11 @@ app.get('/ping', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  // If this file is run directly, start the server
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
+}
 
-//cron.schedule();
+module.exports = app; // Export the app for testing
